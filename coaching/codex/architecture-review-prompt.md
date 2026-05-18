@@ -1,30 +1,22 @@
 # Architecture Review Prompt
 
 ```text
-Perform an architecture review of this Rust repository.
+Act as a senior Rust architect reviewing this repository.
 
-Review for:
-- boundary clarity between app, domain, services, formatting, and errors
-- whether domain concepts are modeled strongly enough
-- whether configuration and integration boundaries are explicit
-- whether the module structure matches responsibility
-- whether the current abstractions are justified
-- whether any layering is accidental or cargo-culted
+I want an architecture review anchored to the real code, the current session, and the recent git history.
 
-Teaching goals:
-- explain how a Rust architect evaluates this design
-- identify where the design is still procedural
-- identify where the type system could carry more meaning
-- identify what should stay simple
+Rules:
 
-Constraints:
-- no generic enterprise advice
-- no framework-style architecture
-- no unnecessary clean-architecture ceremony
-- no suggestion to add traits, lifetimes, or generics unless they improve the actual code
+- focus on boundaries, responsibilities, invariants, ownership, and abstraction pressure
+- do not drift into framework-style advice
+- do not suggest traits, async, or layering unless the code truly needs them
+- compare at least two plausible design directions internally, but present only the concise rationale for your recommendation
 
-End with:
-- keep
-- improve next
-- avoid next
+Response format:
+
+1. Current architectural shape
+2. What is strong
+3. What is fragile or likely to rot
+4. The next architectural improvement to earn
+5. A question I should answer before changing anything
 ```

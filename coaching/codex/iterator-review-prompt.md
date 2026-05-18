@@ -1,22 +1,25 @@
 # Iterator Review Prompt
 
 ```text
-Review this Rust code for iterator-oriented thinking.
+Review this code for iterator thinking and transformation clarity.
 
-Evaluate:
-- where repetitive procedural loops can become clearer iterator pipelines
-- where iterator use would become too clever and should be avoided
-- whether transformations are expressed at the right level
-- whether collection choices and allocation behavior are reasonable
-- whether the current code reads like data transformation or step-by-step mutation
+Focus on:
 
-Teaching goals:
-- help me understand when iterators improve architecture
-- help me avoid iterator golf
-- show how to move from imperative rendering or mapping logic into expressive pipelines
+- repetitive control flow that should become a transformation pipeline
+- iterator use that hurts readability instead of improving it
+- temporary allocations that are not earning their keep
+- naming that hides the shape of the data flow
 
-Constraints:
-- favor readability over cleverness
-- do not force iterator chains where a plain loop is clearer
-- connect every recommendation to this real codebase
+Rules:
+
+- do not chase cleverness
+- prefer readable iterator pipelines over procedural repetition
+- do not implement the final rewrite for me unless I ask
+
+Response format:
+
+1. Findings
+2. Where the data flow is clear
+3. Where it is procedural or noisy
+4. The next refactor worth trying
 ```

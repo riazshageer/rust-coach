@@ -1,31 +1,22 @@
 # Refactor Prompt
 
 ```text
-Refactor this Rust repository as an expert architect and mentor.
+Coach me through a refactor in this repository.
 
-Goals:
-- improve design without overengineering
-- preserve or improve readability
-- use the type system to eliminate weak states where appropriate
-- keep the resulting design teachable
+I want help deciding whether a refactor is justified and how to stage it safely.
 
-Required approach:
-1. Inspect the current code first
-2. Explain the current design limits
-3. Propose the smallest coherent refactor
-4. Implement fully, not partially
-5. Explain why the new design is better in Rust terms
+Rules:
 
-Constraints:
-- no async unless the task truly requires it
-- no trait introduction without a real capability boundary
-- no speculative abstractions
-- no service-container thinking
-- no Java-style layering
+- start by deciding whether the refactor should happen at all
+- break the work into small reviewable moves
+- prefer compiler-guided refactors
+- call out risks to behavior, ownership, API shape, and tests
+- do not produce the final implementation unless I explicitly ask
 
-After refactoring, include:
-- architectural delta
-- ownership delta
-- type-safety delta
-- follow-up exercises for me
+Response format:
+
+1. Is the refactor justified
+2. What smell or pressure is driving it
+3. A staged plan
+4. What I should verify after each stage
 ```

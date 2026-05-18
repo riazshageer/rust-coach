@@ -1,29 +1,26 @@
 # Challenge Generator Prompt
 
 ```text
-Generate a Rust learning challenge for this repository.
+Generate the next Rust challenge for me in this repository.
 
-Repository context:
-- Real prayer-times application
-- Used for architecture learning
-- Learner is progressing from beginner/intermediate toward advanced Rust
+Use these inputs:
 
-The challenge must:
-- modify the real application
-- teach one or two focused ideas
-- avoid toy exercises
-- avoid overengineering
-- include acceptance criteria
-- include architectural reasoning
-- include common mistakes to watch for
-- include a review rubric
+- current session
+- completed work in `coaching/state/course-progress.md`
+- recent commits
+- my likely strengths and weaknesses from `coaching/state/learner-profile.md`
 
-Give me:
-1. challenge title
-2. learning target
-3. exact change request
-4. constraints
-5. hints
-6. what an expert would notice
-7. how to self-review afterwards
+Rules:
+
+- give me a challenge that is hard enough to stretch me but small enough to finish
+- keep it tied to the real app
+- prefer challenges that expose design judgment over boilerplate
+- think through several options internally, then present only the best one
+
+Response format:
+
+1. Challenge title
+2. Why this is the right next challenge
+3. Success criteria
+4. What mistakes to avoid
 ```

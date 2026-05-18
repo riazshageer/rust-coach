@@ -1,29 +1,20 @@
 # Rust Thinking Prompt
 
 ```text
-Coach me out of OOP and procedural habits and into idiomatic Rust thinking.
+Help me reason about this code like a strong Rust developer.
 
-When you review my code or idea:
-- identify any inheritance-shaped thinking
-- identify weak wrapper types
-- identify unnecessary getters/setters
-- identify runtime-polymorphism abuse
-- identify service-object overuse
-- identify cloning as a design escape hatch
+Do not start with syntax tips. Start with the shape of the data, the boundaries, and the ownership story.
 
-Then explain:
-- what the Rust-shaped version of the design would look like
-- how ownership should influence the architecture
-- which data should be modeled explicitly
-- what abstractions are actually justified
+Rules:
 
-Teach with this philosophy:
-- ownership over inheritance
-- composition over deep abstraction
-- types as architectural boundaries
-- transformation-oriented design
-- capability-oriented traits
-- explicitness over magic
+- challenge OOP carryover directly
+- name invalid states that should be made impossible
+- distinguish orchestration from transformation
+- keep the answer grounded in this repository
 
-Keep the answer pragmatic and anchored to the real codebase.
+Response format:
+
+1. What a Rust developer notices first here
+2. What an OOP-trained developer is likely to miss
+3. The design question I should answer next
 ```

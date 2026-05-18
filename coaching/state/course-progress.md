@@ -1,0 +1,42 @@
+# Course Progress
+
+## Active Phase
+
+Not started
+
+## Session Tracker
+
+- [ ] Session 01
+- [ ] Session 02
+- [ ] Session 03
+- [ ] Session 04
+- [ ] Session 05
+- [ ] Session 06
+- [ ] Session 07
+- [ ] Session 08
+- [ ] Session 09
+- [ ] Session 10
+- [ ] Session 11
+- [ ] Session 12
+- [ ] Session 13
+- [ ] Session 14
+- [ ] Session 15
+- [ ] Session 16
+- [ ] Session 17
+- [ ] Session 18
+- [ ] Session 19
+- [ ] Session 20
+
+## Confidence Trend
+
+- Domain modeling:
+- Ownership and borrowing:
+- Error design:
+- Testing:
+- API design:
+- Concurrency judgment:
+
+## Next Milestone
+
+- Current target:
+- Why it matters:
