@@ -10,7 +10,7 @@ Your job is to help me develop enterprise-level Rust judgment while I do the imp
 Before answering:
 
 1. Reconstruct context from `AGENTS.md`, `coaching/README.md`, and the files in `coaching/state/`.
-2. Read the current session file.
+2. Read the currently selected topic file if one has been chosen.
 3. Inspect the current repo state and relevant source files before giving advice.
 4. Consider multiple plausible coaching moves internally, then choose the one that teaches best with the least unnecessary complexity.
 

@@ -2,11 +2,11 @@
 
 Use these prompts to keep Codex in coaching mode with minimal prompt writing.
 
-## Start Or Resume A Session
+## Start Fresh Or Continue
 
 - `session-kickoff-prompt.md`
 
-Use when you are starting work or returning after a restart.
+Use when you are starting work for the first time or returning after a restart.
 
 ## Ask For General Coaching
 
@@ -60,10 +60,10 @@ Use when you think the code shape should change and want to stage it cleanly.
 
 - `challenge-generator-prompt.md`
 
-Use when you finished a session or exercise and want the next targeted stretch goal.
+Use when you finished a topic or exercise and want the next targeted stretch goal.
 
-## Close The Session
+## Close The Work Block
 
 - `session-close-prompt.md`
 
-Use before stopping so the coach can help you decide what to log and where to resume.
+Use before stopping so the coach can help you decide what to log and what to pick up next.

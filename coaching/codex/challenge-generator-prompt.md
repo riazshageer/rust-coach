@@ -5,7 +5,7 @@ Generate the next Rust challenge for me in this repository.
 
 Use these inputs:
 
-- current session
+- current topic, if selected
 - completed work in `coaching/state/course-progress.md`
 - recent commits
 - my likely strengths and weaknesses from `coaching/state/learner-profile.md`

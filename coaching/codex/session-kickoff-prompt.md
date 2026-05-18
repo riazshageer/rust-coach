@@ -13,7 +13,7 @@ Before answering, rebuild context from the repo itself:
    - `coaching/state/current-session.md`
    - `coaching/state/decision-log.md`
    - `coaching/state/git-notes.md`
-4. Read the session file referenced in `coaching/state/current-session.md`.
+4. Read the topic file referenced in `coaching/state/current-session.md` if one has been selected.
 5. Read the latest file in `coaching/state/session-logs/` if one exists.
 6. Inspect:
    - `git status --short`

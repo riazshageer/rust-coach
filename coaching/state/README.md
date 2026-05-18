@@ -1,8 +1,8 @@
 # Coaching State
 
-This folder holds the durable context for your learning journey in this repository.
+This folder holds the coaching notes you choose to keep in this repository.
 
-Use it so each session can resume cleanly even after you restart your terminal or begin a new chat.
+On a fresh repo, these files should read like a clean starting point rather than a continuation.
 
 ## Files
 
@@ -13,4 +13,4 @@ Use it so each session can resume cleanly even after you restart your terminal o
 - `git-notes.md`: patterns discovered from diffs and commit history
 - `session-logs/`: dated notes from each working session
 
-Keep entries short. The purpose is recall and continuity.
+Keep entries short. The purpose is lightweight recall, not historical ceremony.

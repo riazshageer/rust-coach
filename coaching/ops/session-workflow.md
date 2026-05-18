@@ -1,13 +1,13 @@
-# Session Workflow
+# Topic Workflow
 
 ## Before You Start
 
-1. Pick the session file you want to work on.
+1. Pick the topic file you want to work on.
 2. Update `coaching/state/current-session.md`.
 3. Run `scripts/coach_context.sh` if you want a quick repo snapshot.
 4. Start Codex with `coaching/codex/session-kickoff-prompt.md`.
 
-## During The Session
+## During The Work Block
 
 - explain your current understanding first
 - attempt the change before asking for a solution
@@ -17,14 +17,14 @@
 
 ## Before You Stop
 
-1. Update `coaching/state/course-progress.md` if the session is complete.
+1. Update `coaching/state/course-progress.md` if the topic is complete.
 2. Add a short note in `coaching/state/decision-log.md`.
 3. Add a dated note under `coaching/state/session-logs/`.
 4. If git history revealed a pattern, capture it in `coaching/state/git-notes.md`.
 
 ## Review Standard
 
-A session is complete when you can:
+A topic is complete when you can:
 
 - explain the principle in your own words
 - point to where it appears in the code

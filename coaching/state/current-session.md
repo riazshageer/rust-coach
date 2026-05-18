@@ -2,11 +2,11 @@
 
 ## Session
 
-Session 01
+Not selected yet
 
 ## Session File
 
-`coaching/program/sessions/01-working-like-a-rust-learner-with-a-coach.md`
+Not chosen yet
 
 ## Exercise
 
@@ -14,7 +14,7 @@ None selected yet
 
 ## Current Goal
 
-Set up the coaching workflow and establish the first real implementation target.
+Choose a first session and define the first concrete learning target.
 
 ## My Understanding
 
@@ -26,8 +26,8 @@ Set up the coaching workflow and establish the first real implementation target.
 
 ## Exit Criteria
 
-- I know how to use the repo, state files, prompts, and review loop.
+- I have picked a starting session and written down what I want to learn first.
 
 ## Next Concrete Move
 
-- Read the session file and update this note before starting work.
+- Choose a session file, then update this note before starting work.

@@ -4,7 +4,7 @@ This course is split into four phases. Each phase pushes both code skill and eng
 
 ## Phase 1: Working Like A Coached Rust Developer
 
-Sessions `01` through `05`
+Topics `01` through `05`
 
 Focus:
 
@@ -20,7 +20,7 @@ You stop treating Rust as syntax to memorize and start treating it as a design l
 
 ## Phase 2: Building Fluency In Core Rust Design
 
-Sessions `06` through `10`
+Topics `06` through `10`
 
 Focus:
 
@@ -36,7 +36,7 @@ You can make meaningful changes to the app without procedural drift.
 
 ## Phase 3: Architecture For Real Software
 
-Sessions `11` through `15`
+Topics `11` through `15`
 
 Focus:
 
@@ -52,7 +52,7 @@ You can distinguish solid architectural moves from generic "best practice" noise
 
 ## Phase 4: Senior-Level Rust Judgment
 
-Sessions `16` through `20`
+Topics `16` through `20`
 
 Focus:
 
@@ -66,12 +66,12 @@ Expected result:
 
 You can explain why a design is appropriate, not just that it compiles.
 
-## Session Loop
+## Working Loop
 
-For every session:
+For each topic you work through:
 
 1. Rebuild context from `coaching/state/`.
-2. Read the session file.
+2. Read the topic file.
 3. Attempt the work.
 4. Request hints or review.
 5. Commit a coherent change.

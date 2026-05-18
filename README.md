@@ -11,14 +11,14 @@ The code in `src/` is the working project. The material in `coaching/` turns tha
 - `coaching/program/exercises/`: targeted implementation tasks
 - `coaching/program/reviews/`: review checklists for self-review and coach review
 - `coaching/codex/`: ready-to-use prompts for common coaching interactions
-- `coaching/state/`: your persistent learning memory for this repo
+- `coaching/state/`: your coaching notes for this repo, blank until you start using them
 - `scripts/coach_context.sh`: a quick snapshot of the repo and coaching state
 
 ## Recommended Workflow
 
 1. Create your own branch.
 2. Read `coaching/README.md`.
-3. Open `coaching/state/current-session.md` and set the session you want to work on.
+3. Open `coaching/state/current-session.md` and choose the first session you want to work on.
 4. Start Codex with the startup prompt in `coaching/codex/session-kickoff-prompt.md`.
 5. Make your changes yourself.
 6. Use the review prompts to get feedback, hints, and architecture guidance.
@@ -29,11 +29,11 @@ The code in `src/` is the working project. The material in `coaching/` turns tha
 The coaching material is designed to support real working sessions, not passive reading.
 
 - Each session has a specific objective, source focus, coaching loop, and exit criteria.
-- The local state files keep context between restarts so you do not lose the thread of your work.
+- The local state files start blank and only reflect work you have actually done in this repo.
 - Git history is part of the learning loop. Commits, diffs, and reversals give useful evidence about how your Rust thinking is changing over time.
 - The prompts are written to keep Codex in coaching mode by default, with implementation help available only when you deliberately ask for it.
 
-## Keeping Context Across Sessions
+## Coaching State
 
 Use these files consistently:
 
@@ -44,7 +44,7 @@ Use these files consistently:
 - `coaching/state/git-notes.md`
 - `coaching/state/session-logs/`
 
-Treat them as your working notebook for the course. They are lightweight on purpose. The value comes from updating them regularly, not from writing essays.
+Treat them as an empty working notebook for the course. They are lightweight on purpose. Add only the notes you actually want to keep.
 
 ## Suggested Session Rhythm
 

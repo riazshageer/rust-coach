@@ -1,6 +1,8 @@
 # Session Logs
 
-Add one short markdown file per working session.
+This directory is intentionally empty until you finish your first working session.
+
+Add one short markdown file per session only if you want a durable record.
 
 Suggested filename:
 

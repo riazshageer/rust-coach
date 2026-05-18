@@ -3,7 +3,7 @@
 ```text
 Act as a senior Rust architect reviewing this repository.
 
-I want an architecture review anchored to the real code, the current session, and the recent git history.
+I want an architecture review anchored to the real code, the current topic, if any, and the recent git history.
 
 Rules:
 
