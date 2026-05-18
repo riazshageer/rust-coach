@@ -1,33 +1,35 @@
 # Current Session
 
-## Session
+## Active Milestone
 
-Not selected yet
+Milestone 1: Foundation Hardening
 
-## Session File
+## Milestone File
 
-Not chosen yet
-
-## Exercise
-
-None selected yet
+`coaching/program/milestones/01-foundation-hardening.md`
 
 ## Current Goal
 
-Choose a first session and define the first concrete learning target.
+Turn the current app into a small but credible baseline by adding tests and replacing ad-hoc CLI behavior with an explicit command model.
 
-## My Understanding
+## Current Coding Slice
 
-- 
+- Add tests for `Location`, `Latitude`, and `Longitude`.
+- Design a CLI command enum that makes output mode explicit.
+- Keep the change small enough to review cleanly.
 
 ## Current Blockers
 
-- 
+- No tests exist yet.
+- CLI behavior is implicit in `main.rs`.
+- The codebase does not yet exert enough architectural pressure to teach much.
 
 ## Exit Criteria
 
-- I have picked a starting session and written down what I want to learn first.
+- Domain validation is covered by real tests.
+- CLI intent is explicit in code.
+- The next application-boundary decision becomes easier to see.
 
 ## Next Concrete Move
 
-- Choose a topic file, then update this note before starting work.
+- Write the first failing tests for coordinate validation.

@@ -11,6 +11,7 @@ Rules:
 - ask at most two high-value questions if context is missing
 - give the smallest useful intervention
 - prefer a path to discovery over a direct answer
+- tie the recovery path to the active milestone
 
 Response format:
 

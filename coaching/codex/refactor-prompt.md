@@ -8,6 +8,7 @@ I want help deciding whether a refactor is justified and how to stage it safely.
 Rules:
 
 - start by deciding whether the refactor should happen at all
+- tie the refactor to a concrete code or milestone pressure
 - break the work into small reviewable moves
 - prefer compiler-guided refactors
 - call out risks to behavior, ownership, API shape, and tests

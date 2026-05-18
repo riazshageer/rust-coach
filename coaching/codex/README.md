@@ -1,69 +1,69 @@
 # Prompt Index
 
-Use these prompts to keep Codex or GitHub Copilot CLI in coaching mode with minimal prompt writing.
+These prompts are helper prompts for the coaching system. They reduce startup friction, but the roadmap remains the source of truth.
 
-## Start Fresh Or Continue
+## Start Or Resume Work
 
 - `session-kickoff-prompt.md`
 
-Use when you are starting work for the first time or returning after a restart.
+Use when beginning a session or resuming after a restart.
 
-## Ask For General Coaching
+## Ask For The Next Coding Move
 
 - `master-coach-prompt.md`
 
-Use when you want a broad coaching read on the current state and the best next move.
+Use when you want the coach to identify the best next slice from the roadmap and current repo state.
 
-## Ask For Hints Without A Solution
+## Ask For Hints Without Handing Off The Code
 
 - `hint-only-prompt.md`
 
-Use when you want help but still want to own the implementation.
+Use when you want guidance but still intend to implement the change yourself.
 
-## Recover When You Are Stuck
+## Recover When Stuck
 
 - `stuck-prompt.md`
 
-Use when you are blocked and need diagnosis, not a handoff.
+Use when you need diagnosis and scope reduction.
 
-## Request A Review
+## Request A Findings-First Review
 
 - `review-prompt.md`
 
-Use after you have a diff and want findings-first feedback.
+Use after you have a meaningful diff.
 
-## Pressure-Test The Architecture
+## Pressure-Test Architecture
 
 - `architecture-review-prompt.md`
 
-Use when you want the coach to focus on boundaries, responsibilities, and abstraction pressure.
+Use when a change introduces or alters boundaries.
 
-## Pressure-Test Ownership
+## Pressure-Test Ownership Choices
 
 - `ownership-review-prompt.md`
 
-Use when the design feels borrow-heavy, clone-heavy, or awkward.
+Use when the data flow feels clone-heavy, borrow-heavy, or unclear.
 
-## Pressure-Test Iterator Use
+## Pressure-Test Transformation Code
 
 - `iterator-review-prompt.md`
 
-Use when you are deciding whether a loop should become a transformation pipeline.
+Use when collection-shaping logic feels noisy or procedural.
 
-## Plan A Safe Refactor
+## Stage A Refactor Safely
 
 - `refactor-prompt.md`
 
-Use when you think the code shape should change and want to stage it cleanly.
+Use when the code shape should change and you want a reviewable sequence.
 
-## Get The Next Challenge
+## Generate The Next Stretch Task
 
 - `challenge-generator-prompt.md`
 
-Use when you finished a topic or exercise and want the next targeted stretch goal.
+Use after a slice lands and you want the next deliberate stretch.
 
-## Close The Work Block
+## Close The Session
 
 - `session-close-prompt.md`
 
-Use before stopping so the coach can help you decide what to log and what to pick up next.
+Use before stopping so the coach updates the restart state and next step.

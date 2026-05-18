@@ -9,6 +9,7 @@ Focus on:
 - iterator use that hurts readability instead of improving it
 - temporary allocations that are not earning their keep
 - naming that hides the shape of the data flow
+- whether the code shape supports the current milestone cleanly
 
 Rules:
 

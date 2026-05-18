@@ -5,7 +5,7 @@ Generate the next Rust challenge for me in this repository.
 
 Use these inputs:
 
-- current topic, if selected
+- the active milestone or the next milestone
 - completed work in `coaching/state/course-progress.md`
 - recent commits
 - my likely strengths and weaknesses from `coaching/state/learner-profile.md`
@@ -13,7 +13,7 @@ Use these inputs:
 Rules:
 
 - give me a challenge that is hard enough to stretch me but small enough to finish
-- keep it tied to the real app
+- keep it tied to the roadmap and real app
 - prefer challenges that expose design judgment over boilerplate
 - think through several options internally, then present only the best one
 

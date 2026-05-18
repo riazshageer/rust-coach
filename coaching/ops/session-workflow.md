@@ -1,32 +1,38 @@
-# Topic Workflow
+# Session Workflow
 
 ## Before You Start
 
-1. Pick the topic file you want to work on.
-2. Update `coaching/state/current-session.md`.
-3. Run `scripts/coach_context.sh` if you want a quick repo snapshot.
-4. Start Codex or GitHub Copilot CLI with `coaching/codex/session-kickoff-prompt.md`.
+1. Run `scripts/coach_context.sh`.
+2. Start the agent with `coaching/codex/session-kickoff-prompt.md`.
+3. Let the coach identify the active milestone, current task, and acceptance criteria.
+4. Confirm only what is still ambiguous enough to block coding.
+
+The learner should not have to manually reconstruct the plan.
 
 ## During The Work Block
 
-- explain your current understanding first
-- attempt the change before asking for a solution
-- ask for hints when stuck
-- ask for review after each meaningful diff
-- keep commits small enough that each one tells a design story
+- code first
+- keep scope to one backlog slice
+- ask for review after a meaningful diff, not after every thought
+- use tests or compiler feedback to tighten the next step
+- split work when a change mixes feature behavior, refactor, and cleanup
 
 ## Before You Stop
 
-1. Update `coaching/state/course-progress.md` if the topic is complete.
-2. Add a short note in `coaching/state/decision-log.md`.
-3. Add a dated note under `coaching/state/session-logs/`.
-4. If git history revealed a pattern, capture it in `coaching/state/git-notes.md`.
+1. Review the current diff or final commit.
+2. Update `coaching/state/current-session.md` if the official milestone changed.
+3. Update local memory in `coaching/state/local/` with:
+   - what changed
+   - what is still open
+   - the exact next restart step
+4. Add a tracked session log only when a milestone closed or a durable lesson was learned.
 
-## Review Standard
+## Completion Standard
 
-A topic is complete when you can:
+A backlog slice is complete when:
 
-- explain the principle in your own words
-- point to where it appears in the code
-- defend the design choice you made
-- describe one mistake you avoided or corrected
+- the code compiles
+- behavior is covered by the right level of tests when practical
+- the change fits the target architecture
+- the diff can be explained clearly
+- the next slice is obvious

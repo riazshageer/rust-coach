@@ -2,8 +2,18 @@
 
 set -euo pipefail
 
+scripts/init_local_coaching_state.sh >/dev/null
+
 echo "== Current Session =="
-sed -n '1,80p' coaching/state/current-session.md
+sed -n '1,120p' coaching/state/current-session.md
+
+echo
+echo "== Local Memory: Current Work =="
+sed -n '1,120p' coaching/state/local/current-work.md
+
+echo
+echo "== Local Memory: Restart Notes =="
+sed -n '1,120p' coaching/state/local/restart-notes.md
 
 echo
 echo "== Git Status =="

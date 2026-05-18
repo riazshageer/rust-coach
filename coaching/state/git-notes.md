@@ -8,3 +8,4 @@ Use this file to capture patterns discovered from diffs and commit history.
   Observation:
   Evidence:
   Coaching takeaway:
+  Next guardrail:

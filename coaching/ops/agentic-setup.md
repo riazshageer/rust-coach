@@ -4,92 +4,69 @@ This repository is optimized for a coach-first coding agent, with first-class su
 
 ## Design Goals
 
-- keep the learner doing the implementation work
-- preserve context across restarts when notes exist
-- make startup cheap
-- use git history as coaching evidence
-- provide reusable prompts for common moments
+- keep the learner writing code most of the time
+- make restart cost near zero
+- reduce manual note-taking
+- use git history and diffs as coaching evidence
+- hold the learner to production-grade standards
 
-## What Was Missing In The Original Structure
+## What This System Implements
 
-- no enforced coach-first operating model
-- no persistent state beyond the chat thread
-- no standard startup routine for rebuilding context
-- no simple tracker linking the learner to the right starting file and exit criteria
-- no lightweight system for using commits and diffs as learning signals
+### 1. Repo-Level Coaching Rules
 
-## What This Repo Now Implements
+`AGENTS.md` and `.github/copilot-instructions.md` tell the agent to rebuild context, identify the active milestone, and keep the learner moving toward the next implementation slice.
 
-### 1. Repo-Level Agent Instructions
+### 2. Two-Layer Memory
 
-`AGENTS.md` tells agent-style tools to coach by default, review before coding, and reconstruct context from local files and git state.
+Tracked memory in `coaching/state/` holds durable program context.
 
-`.github/copilot-instructions.md` gives GitHub Copilot CLI the same repository-wide guidance using the location documented by GitHub.
+Git-ignored memory in `coaching/state/local/` holds:
 
-### 2. Persistent Coaching Memory
+- current task
+- restart notes
+- architecture observations
+- short-horizon session ledger
 
-`coaching/state/` stores durable learning context:
+The local layer is the agent's responsibility.
 
-- learner profile
-- course progress
-- active topic
-- decision log
-- git-derived notes
-- session logs
+### 3. Product-Led Curriculum
 
-### 3. Startup Context
+The coach does not start from a generic topic. The coach starts from:
 
-`coaching/codex/session-kickoff-prompt.md` gives a standard opening prompt that tells the agent exactly what to read and how to respond.
+- the product vision
+- the target architecture
+- the roadmap milestone
+- the current diff
+
+That is what keeps sessions practical.
 
 ### 4. Prompt Library
 
-The prompt set covers the common coaching loop:
+The prompts are helper prompts, not the program itself. They exist to start quickly, request reviews, recover from blockers, and close sessions cleanly.
 
-- start work
-- ask for hints
-- get unstuck
-- request review
-- run architecture checkpoint
-- review ownership
-- review iterators
-- generate the next challenge
-- close the work block
+### 5. Git-Aware Review
 
-### 5. Git-Aware Coaching
-
-The process explicitly uses:
+The coach must use:
 
 - `git status --short`
-- recent commit history
-- the current diff
-- commit boundaries
+- `git log --oneline --decorate -8`
+- `git diff`
+- commit boundaries when present
 
-This lets the coach comment on design evolution instead of just the final file state.
+The goal is to review design evolution, not just file snapshots.
 
 ## Operating Model
 
-1. Learner chooses a starting topic or continues an existing one.
-2. Learner updates `coaching/state/current-session.md`.
-3. Learner starts Codex or GitHub Copilot CLI with the kickoff prompt.
-4. The agent reads the memory files and repo state.
-5. Learner implements.
-6. The agent reviews, questions, and guides.
-7. Learner logs progress locally before stopping.
+1. The agent bootstraps local memory if needed.
+2. The agent rebuilds context from repo docs, state, and git.
+3. The agent identifies the current milestone and next coding slice.
+4. The learner codes.
+5. The agent reviews and adjusts the next slice.
+6. The agent writes restart context into local memory before the session ends.
 
-## Why This Works Better
+## Failure Modes To Avoid
 
-- It reduces prompt-writing overhead.
-- It gives the agent stable context when the learner chooses to keep notes.
-- It keeps the learner responsible for the code.
-- It creates a clear bridge between lesson intent and repository evidence.
-
-## Notes On Prompt Engineering
-
-The prompts in this repo use a few practical rules:
-
-- define the role and constraints clearly
-- anchor every response to repository evidence
-- ask for structured outputs
-- encourage internal comparison of alternatives before answering
-- avoid hidden chain-of-thought disclosure while still asking for concise rationale
-- force the coach to prefer hints and reviews over direct implementation
+- turning every session into architecture talk
+- letting the learner manage the roadmap manually
+- asking for reflections before the learner has shipped anything
+- introducing layers or traits without concrete pressure

@@ -2,16 +2,14 @@
 
 ## Date
 
-## Session
+## Milestone
 
 ## Goal
 
-## What I Tried
+## Coding Slice Completed
 
-## What Worked
+## Review Findings
 
-## What I Misunderstood
+## Decision Made
 
-## Review Notes
-
-## Next Move
+## Exact Next Restart Step

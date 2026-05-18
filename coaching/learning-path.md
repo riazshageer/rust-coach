@@ -1,88 +1,109 @@
 # Learning Path
 
-This course is split into four phases. Each phase pushes both code skill and engineering judgment.
+This program is delivery-first. The learner progresses by shipping milestones, not by advancing through abstract Rust topics.
 
-## Phase 1: Working Like A Coached Rust Developer
+## Phase 1: Foundation Hardening
 
-Topics `01` through `05`
+Goal:
+Turn the current toy CLI into a small but disciplined application.
 
-Focus:
+Primary work:
 
-- setting up the coaching workflow
-- reading an unfamiliar Rust codebase
-- domain modeling
-- invariants and smart constructors
-- error boundaries
+- add tests around domain invariants
+- replace ad-hoc CLI parsing with a real command model
+- make configuration explicit
+- introduce request/response objects for use cases
 
-Expected result:
+Rust focus:
 
-You stop treating Rust as syntax to memorize and start treating it as a design language.
+- value objects
+- enums and command modeling
+- error propagation
+- test structure
 
-## Phase 2: Building Fluency In Core Rust Design
+## Phase 2: Domain Expansion
 
-Topics `06` through `10`
+Goal:
+Grow the product from "today's schedule" into a useful scheduling engine.
 
-Focus:
+Primary work:
 
-- iterators and transformation pipelines
-- ownership and borrowing in real design
-- tests as design tools
-- CLI and configuration boundaries
-- module and API shape
+- next-prayer queries
+- schedule-for-date and schedule-for-range use cases
+- timezone-aware outputs and validation
+- explicit calculation profiles
 
-Expected result:
+Rust focus:
 
-You can make meaningful changes to the app without procedural drift.
+- domain-driven types
+- ownership across request flows
+- iterators and collection shaping
+- serialization boundaries
 
-## Phase 3: Architecture For Real Software
+## Phase 3: Application Boundaries
 
-Topics `11` through `15`
+Goal:
+Separate policy from infrastructure so the app becomes testable and extensible.
 
-Focus:
+Primary work:
+
+- ports for time, calculation, and configuration
+- application services/use cases
+- adapter boundaries for CLI and output
+- test doubles where appropriate
+
+Rust focus:
 
 - traits as capability boundaries
-- serialization and external formats
-- refactoring with compiler guidance
-- performance and cost models
-- concurrency fundamentals
+- dependency injection without a framework
+- borrowing vs owning across layers
+- error taxonomy
 
-Expected result:
+## Phase 4: Production Readiness
 
-You can distinguish solid architectural moves from generic "best practice" noise.
+Goal:
+Make the system look like software that could survive real usage.
 
-## Phase 4: Senior-Level Rust Judgment
+Primary work:
 
-Topics `16` through `20`
+- config files and profile loading
+- export adapters such as JSON and ICS
+- logging and observability design
+- benchmark or cost-model conversations
+- packaging and release workflow
 
-Focus:
+Rust focus:
 
-- deciding when async is worth it
-- extensibility without framework creep
-- git-based architecture review
-- production hardening
-- final architecture defense
+- serde and external format boundaries
+- module organization
+- feature evaluation
+- performance reasoning
 
-Expected result:
+## Phase 5: Senior Judgment
 
-You can explain why a design is appropriate, not just that it compiles.
+Goal:
+Force deliberate engineering decisions instead of cargo-cult "best practice."
 
-## Working Loop
+Primary work:
 
-For each topic you work through:
+- evaluate threads for batch generation
+- evaluate async and reject or adopt it with evidence
+- perform architecture reviews from git history
+- defend tradeoffs in writing
 
-1. Rebuild context from `coaching/state/`.
-2. Read the topic file.
-3. Attempt the work.
-4. Request hints or review.
-5. Commit a coherent change.
-6. Capture what changed in your understanding.
+Rust focus:
+
+- sync concurrency primitives
+- async cost/benefit analysis
+- API design
+- architectural restraint
 
 ## Graduation Standard
 
-By the end of the course, you should be able to:
+The learner finishes when they can:
 
-- model domain rules with confidence
-- design APIs around ownership intentionally
-- reject unnecessary abstraction
-- use tests and diffs as architectural evidence
-- defend tradeoffs the way a senior engineer would
+- ship meaningful Rust changes with minimal hand-holding
+- explain what each type protects
+- keep architecture coherent under change
+- use Rust features because they fit the problem, not because they are available
+- defend production concerns beyond syntax, including testing, packaging, and operational shape

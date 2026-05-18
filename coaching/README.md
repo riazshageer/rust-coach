@@ -1,65 +1,60 @@
 # Rust Coaching System
 
-This folder turns the prayer-times application into a deliberate coaching course.
+This coaching system is built for a learner who already knows how to program, has read the Rust Book, and now needs deliberate reps shipping real Rust code. The coach is not here to replace implementation effort. The coach is here to drive judgment, pace, architecture, and review quality while the coachee keeps coding.
 
-The design goal is simple: you do the implementation work, while your agent behaves like a strong Rust coach who reviews your decisions and helps you build sound Rust judgment from the first session onward.
+## Core Position
 
-The active curriculum lives under `coaching/program/`.
+The previous failure mode for many coaching setups is obvious: too much discussion, too much note-taking, and too little delivery. This repository is designed to avoid that.
 
-## What Changed In This Version
+The operating assumption is:
 
-The course is now built around working sessions instead of static reading:
+- the learner should spend most sessions writing code
+- the coach should continuously narrow the next coding move
+- state should live in local agent-managed memory, not in the learner's head
+- every milestone should produce working software, tests, and review evidence
 
-- every session has a coaching loop and exit criteria
-- the repo includes persistent local memory in `coaching/state/`
-- startup prompts can rebuild context after restarts if you decide to keep notes
-- git history is treated as part of the teaching system
-- prompts are tuned for hints, reviews, and architecture guidance before implementation
+## What The Coach Must Do
 
-## Core Principles
+- reconstruct context from repo files, local memory, and git
+- choose or confirm the next concrete coding task
+- force justification when design choices are weak
+- review diffs findings-first
+- update local memory after major moves so restarts are cheap
+- connect Rust language features to real architecture decisions
 
-- learn on a real codebase
-- keep the learner in the driver's seat
-- use review and reflection, not just explanation
-- strengthen architectural judgment, not just syntax recall
-- practice enterprise-grade Rust decision making without enterprise-grade ceremony
+## What The Learner Must Do
 
-## Folder Guide
+- write the production code unless implementation help is explicitly requested
+- explain reasoning before or after changes, not instead of changes
+- keep diffs small enough to review
+- use tests, compiler feedback, and git history as learning material
+- treat each milestone as a delivery target, not a reading assignment
 
-- `program/sessions/`: the main course path
-- `program/exercises/`: targeted coding tasks tied to the app
-- `program/reviews/`: checklists for self-review and coach review
-- `codex/`: prompt library for common coaching moments
-- `program/progression/`: descriptions of what growth looks like across levels
-- `state/`: optional coaching notes, blank until you start using them
-- `ops/`: operating guides for the coaching workflow
+## System Components
 
-## Recommended Use
+- `program/`: the product target and implementation roadmap
+- `ops/`: the working rules for the coach and learner
+- `codex/`: helper prompts for common interactions
+- `state/`: baseline tracked state plus git-ignored local memory
 
-1. Read [learning-path.md](./learning-path.md).
-2. Pick your starting session in `state/current-session.md`.
-3. Read [program/README.md](./program/README.md).
-4. Start Codex or GitHub Copilot CLI with [codex/session-kickoff-prompt.md](./codex/session-kickoff-prompt.md).
-5. Implement the work yourself.
-6. Use the review prompts to pressure-test your choices.
-7. Update the state files before ending the session.
+## Memory Model
 
-## What Good Progress Looks Like
+There are two layers of memory:
 
-- you can explain what a type protects
-- you can justify ownership decisions without hand-waving
-- you know when not to add a trait
-- your tests lock down behavior and boundaries, not just happy paths
-- your commits reflect design moves instead of random file edits
+1. Checked-in baseline in `coaching/state/`
+   Used for durable repo-wide context such as learner profile, progress shape, and the official current milestone.
 
-## How To Think About The Coach
+2. Git-ignored working memory in `coaching/state/local/`
+   Used for agent-managed short-horizon state such as the active task, current blockers, architecture observations, and next-session restart context.
 
-The coach should help you:
+The local layer is the default operational memory. The learner should not need to manually maintain it.
 
-- narrow the problem
-- evaluate tradeoffs
-- spot invalid assumptions
-- review diffs and commit history
-- suggest the next right challenge
+## Working Rule
 
-The coach should not become your silent implementation engine.
+If there is any doubt between "talk more" and "define the next code slice," choose the next code slice.
+
+## Read Next
+
+- [program/README.md](/home/rshageer/Playground/prayer_times/coaching/program/README.md:1)
+- [ops/session-workflow.md](/home/rshageer/Playground/prayer_times/coaching/ops/session-workflow.md:1)
+- [ops/agentic-setup.md](/home/rshageer/Playground/prayer_times/coaching/ops/agentic-setup.md:1)

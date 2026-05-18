@@ -1,16 +1,31 @@
 # Coaching State
 
-This folder holds the coaching notes you choose to keep in this repository.
+This folder contains the durable coaching state for the repository.
 
-On a fresh repo, these files should read like a clean starting point rather than a continuation.
+## Two Layers
 
-## Files
+### Tracked Baseline
 
-- `learner-profile.md`: long-term goals, weak spots, habits, confidence notes
-- `course-progress.md`: where you are in the course and what is complete
-- `current-session.md`: the active topic, current goal, blockers, and next move
-- `decision-log.md`: important design and learning decisions
-- `git-notes.md`: patterns discovered from diffs and commit history
-- `session-logs/`: dated notes from each working block
+These files are checked in:
 
-Keep entries short. The purpose is lightweight recall, not historical ceremony.
+- `learner-profile.md`
+- `course-progress.md`
+- `current-session.md`
+- `decision-log.md`
+- `git-notes.md`
+- `session-logs/`
+
+Use them for durable context the whole repo should understand.
+
+### Local Agent Memory
+
+`coaching/state/local/` is git-ignored and should be created automatically by `scripts/init_local_coaching_state.sh`.
+
+Use it for:
+
+- exact current task
+- restart notes
+- short-horizon blockers
+- architecture observations
+
+The local layer is the default operational memory. The learner should not have to keep this current manually.

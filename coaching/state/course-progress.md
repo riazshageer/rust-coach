@@ -2,23 +2,27 @@
 
 ## Active Phase
 
-Not started
+Phase 1: Foundation Hardening
 
-## Session Status
+## Milestone Status
 
-- No sessions completed yet.
-- No active session selected yet.
+- Milestone 1: In progress
+- Milestone 2: Not started
+- Milestone 3: Not started
+- Milestone 4: Not started
+- Milestone 5: Not started
+- Milestone 6: Not started
 
 ## Confidence Trend
 
-- Domain modeling:
-- Ownership and borrowing:
-- Error design:
-- Testing:
-- API design:
-- Concurrency judgment:
+- Domain modeling: early but promising
+- Ownership and borrowing: conceptual understanding present, applied fluency not proven yet
+- Error design: early
+- Testing: needs deliberate reps
+- API design: decent general instinct, Rust-specific sharpness still to be built
+- Concurrency judgment: not assessed yet
 
 ## Next Milestone
 
-- Current target:
-- Why it matters:
+- Current target: Milestone 1, starting with tests plus real CLI command modeling
+- Why it matters: it creates the first real delivery surface and stops the program from staying theoretical

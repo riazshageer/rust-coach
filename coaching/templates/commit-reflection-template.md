@@ -4,8 +4,10 @@
 
 ## What Changed
 
-## Why The Boundary Was Chosen
+## What Milestone This Moved
 
-## What This Reveals About My Current Rust Thinking
+## Why The Boundary Or Shape Was Chosen
+
+## What The Diff Says About My Current Rust Thinking
 
 ## What I Would Improve Next Time

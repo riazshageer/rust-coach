@@ -1,10 +1,11 @@
 # Decision Log
 
-Record short notes about meaningful technical or learning decisions.
+Record durable technical or learning decisions that should survive beyond one work block.
 
 ## Entries
 
 - Date:
   Decision:
-  Why:
-  What I learned:
+  Why it mattered:
+  Evidence:
+  What changed after the decision:

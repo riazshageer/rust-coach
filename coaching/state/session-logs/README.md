@@ -1,8 +1,12 @@
 # Session Logs
 
-This directory is intentionally empty until you finish your first working session.
+This directory is intentionally empty until you finish a meaningful working session.
 
-Add one short markdown file per session only if you want a durable record.
+Add one short markdown file only when one of these is true:
+
+- a milestone closed
+- a design decision should be preserved
+- a coaching lesson is important enough to survive local memory cleanup
 
 Suggested filename:
 
@@ -10,8 +14,8 @@ Suggested filename:
 
 Suggested structure:
 
-- goal
-- what I changed
-- where I got stuck
-- what the review surfaced
-- what I should do next
+- milestone
+- coding slice completed
+- review findings
+- decision made
+- next restart step

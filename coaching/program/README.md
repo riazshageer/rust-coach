@@ -1,12 +1,23 @@
 # Program Overview
 
-This is the coaching curriculum for the repository.
+This directory is the source of truth for what gets built and how the coaching progresses.
 
-Use this tree as the source of truth for the course:
+The program is organized around product delivery, not abstract lessons.
 
-- `sessions/`: the topic sequence you can start from the beginning
-- `exercises/`: the implementation work tied to the real app
-- `reviews/`: the self-review and coach-review checklists
-- `progression/`: what growth should look like over time
+## Source Of Truth
 
-The rest of `coaching/` supports this curriculum with prompts, workflow notes, and optional state tracking.
+- `product-vision.md`: what the finished product should do and why it matters
+- `target-architecture.md`: the architectural shape the coach is steering toward
+- `delivery-roadmap.md`: the ordered implementation plan
+- `milestones/`: detailed milestone briefs with required coding work
+- `review-gates/`: the standards used to decide whether a slice is actually done
+
+## How To Use This Program
+
+1. Read the product vision and target architecture.
+2. Open the roadmap and identify the active milestone.
+3. Use `coaching/state/current-session.md` plus `coaching/state/local/` to confirm the exact task in flight.
+4. Code the smallest slice that moves the milestone forward.
+5. Review the diff against the relevant review gate.
+
+If a discussion does not end in a clearer coding move, it is not serving the program.

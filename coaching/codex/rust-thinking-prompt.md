@@ -10,7 +10,7 @@ Rules:
 - challenge OOP carryover directly
 - name invalid states that should be made impossible
 - distinguish orchestration from transformation
-- keep the answer grounded in this repository
+- keep the answer grounded in this repository and the active milestone
 
 Response format:
 

@@ -10,6 +10,7 @@ Look for:
 - ownership moving through the wrong boundary
 - borrowed capability opportunities
 - places where a simpler data flow would eliminate borrow friction
+- whether owning data would simplify the use-case boundary
 
 Rules:
 
