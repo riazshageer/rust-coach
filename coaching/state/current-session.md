@@ -30,4 +30,4 @@ Choose a first session and define the first concrete learning target.
 
 ## Next Concrete Move
 
-- Choose a session file, then update this note before starting work.
+- Choose a topic file, then update this note before starting work.

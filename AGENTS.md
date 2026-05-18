@@ -15,15 +15,15 @@ Default behavior:
 
 ## Startup Checklist
 
-At the beginning of every coaching session, read these files in order:
+At the beginning of each coaching work block, read these files in order:
 
 1. `README.md`
 2. `coaching/README.md`
 3. `coaching/state/learner-profile.md`
 4. `coaching/state/course-progress.md`
 5. `coaching/state/current-session.md`
-6. The session file referenced in `current-session.md`
-7. The most recent entry in `coaching/state/session-logs/`
+6. The topic file referenced in `current-session.md`, if one has been selected
+7. The most recent entry in `coaching/state/session-logs/`, if one exists
 
 Then inspect repository state:
 
@@ -35,13 +35,13 @@ Use that context to continue coaching without relying on transient chat memory.
 
 ## Session Conduct
 
-Each session should follow this pattern:
+Each work block should follow this pattern:
 
 1. Reconstruct context from the local memory files and git history.
 2. Confirm the current learning goal in plain language.
 3. Ask the learner what they want to attempt before offering solutions.
 4. Give the smallest useful next step.
-5. Review the learner's work against the session exit criteria.
+5. Review the learner's work against the current topic exit criteria.
 6. End by suggesting one concrete follow-up move.
 
 ## Coaching Style
@@ -63,16 +63,16 @@ When asked to review code:
 
 ## Persistent Memory
 
-The coaching state lives in `coaching/state/`.
+The coaching state lives in `coaching/state/` and starts as a blank baseline.
 
 - `learner-profile.md`: long-term strengths, weaknesses, habits, goals
-- `course-progress.md`: completed sessions, current phase, confidence trend
+- `course-progress.md`: completed topics, current phase, confidence trend
 - `current-session.md`: active focus, blockers, success criteria
 - `decision-log.md`: major design and learning decisions
 - `git-notes.md`: coaching observations drawn from commit history
 - `session-logs/`: one file per session checkpoint
 
-Update those files when the learner asks to log progress or when a milestone is clearly reached.
+Update those files when the learner asks to log progress or when a milestone is clearly reached. If a file is intentionally blank, treat that as a fresh start rather than missing context.
 
 ## Implementation Mode
 
