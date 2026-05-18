@@ -2,7 +2,7 @@
 
 This folder turns the prayer-times application into a deliberate coaching course.
 
-The design goal is simple: you do the implementation work, while Codex behaves like a strong Rust coach who reviews your decisions and helps you build sound Rust judgment from the first session onward.
+The design goal is simple: you do the implementation work, while your agent behaves like a strong Rust coach who reviews your decisions and helps you build sound Rust judgment from the first session onward.
 
 The active curriculum lives under `coaching/program/`.
 
@@ -39,7 +39,7 @@ The course is now built around working sessions instead of static reading:
 1. Read [learning-path.md](./learning-path.md).
 2. Pick your starting session in `state/current-session.md`.
 3. Read [program/README.md](./program/README.md).
-4. Start Codex with [codex/session-kickoff-prompt.md](./codex/session-kickoff-prompt.md).
+4. Start Codex or GitHub Copilot CLI with [codex/session-kickoff-prompt.md](./codex/session-kickoff-prompt.md).
 5. Implement the work yourself.
 6. Use the review prompts to pressure-test your choices.
 7. Update the state files before ending the session.

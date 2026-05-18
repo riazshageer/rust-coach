@@ -5,7 +5,7 @@
 1. Pick the topic file you want to work on.
 2. Update `coaching/state/current-session.md`.
 3. Run `scripts/coach_context.sh` if you want a quick repo snapshot.
-4. Start Codex with `coaching/codex/session-kickoff-prompt.md`.
+4. Start Codex or GitHub Copilot CLI with `coaching/codex/session-kickoff-prompt.md`.
 
 ## During The Work Block
 

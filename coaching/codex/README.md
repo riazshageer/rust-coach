@@ -1,6 +1,6 @@
 # Prompt Index
 
-Use these prompts to keep Codex in coaching mode with minimal prompt writing.
+Use these prompts to keep Codex or GitHub Copilot CLI in coaching mode with minimal prompt writing.
 
 ## Start Fresh Or Continue
 

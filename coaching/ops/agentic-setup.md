@@ -1,6 +1,6 @@
 # Agentic Coaching Setup
 
-This repository is optimized for OpenAI Codex acting as a coach-first partner.
+This repository is optimized for a coach-first coding agent, with first-class support for OpenAI Codex and GitHub Copilot CLI.
 
 ## Design Goals
 
@@ -22,7 +22,9 @@ This repository is optimized for OpenAI Codex acting as a coach-first partner.
 
 ### 1. Repo-Level Agent Instructions
 
-`AGENTS.md` tells Codex to coach by default, review before coding, and reconstruct context from local files and git state.
+`AGENTS.md` tells agent-style tools to coach by default, review before coding, and reconstruct context from local files and git state.
+
+`.github/copilot-instructions.md` gives GitHub Copilot CLI the same repository-wide guidance using the location documented by GitHub.
 
 ### 2. Persistent Coaching Memory
 
@@ -37,7 +39,7 @@ This repository is optimized for OpenAI Codex acting as a coach-first partner.
 
 ### 3. Startup Context
 
-`coaching/codex/session-kickoff-prompt.md` gives a standard opening prompt that tells Codex exactly what to read and how to respond.
+`coaching/codex/session-kickoff-prompt.md` gives a standard opening prompt that tells the agent exactly what to read and how to respond.
 
 ### 4. Prompt Library
 
@@ -68,16 +70,16 @@ This lets the coach comment on design evolution instead of just the final file s
 
 1. Learner chooses a starting topic or continues an existing one.
 2. Learner updates `coaching/state/current-session.md`.
-3. Learner starts Codex with the kickoff prompt.
-4. Codex reads the memory files and repo state.
+3. Learner starts Codex or GitHub Copilot CLI with the kickoff prompt.
+4. The agent reads the memory files and repo state.
 5. Learner implements.
-6. Codex reviews, questions, and guides.
+6. The agent reviews, questions, and guides.
 7. Learner logs progress locally before stopping.
 
 ## Why This Works Better
 
 - It reduces prompt-writing overhead.
-- It gives Codex stable context when the learner chooses to keep notes.
+- It gives the agent stable context when the learner chooses to keep notes.
 - It keeps the learner responsible for the code.
 - It creates a clear bridge between lesson intent and repository evidence.
 
