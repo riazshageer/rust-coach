@@ -67,6 +67,17 @@ Suggested pattern:
 4. commit
 5. reflect
 
+## Coachee Quickstart
+
+1. Open `coaching/state/current-session.md`.
+2. Choose the topic file you want to work on from `coaching/program/sessions/`.
+3. Paste the prompt from `coaching/codex/session-kickoff-prompt.md` into Codex.
+4. Let Codex rebuild context and ask its first coaching question.
+5. Answer the question and attempt the work yourself.
+6. Ask for hints or review when you get stuck or have a meaningful diff.
+7. Revise your code based on the feedback.
+8. Update `coaching/state/` only if you want to keep notes for next time, or ask Codex to update those files for you.
+
 ## Running The App
 
 ```bash
